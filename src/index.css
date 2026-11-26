@@ -444,16 +444,24 @@ a {
 .timeline-node {
   scroll-snap-align: start;
   position: relative;
-  padding: 20px 0 20px 24px;
+  /* The gutter line and its marker live in this margin, never inside the
+     node's own padding box — a node with a visible background (the
+     milestone plaque below) must never have the wandering line drawn
+     underneath it. --marker-x already carries the full node-local offset
+     (see Timeline.tsx's runNarrow, which bakes in both the line's own
+     screen position and this margin), so the marker only ever needs its
+     own half-width subtracted here. */
+  margin-left: 24px;
+  padding: 20px 16px;
 }
 
 .timeline-node::before {
   content: '';
   position: absolute;
-  left: calc(-6px + var(--marker-x, 0px));
+  left: calc(var(--marker-x, 0px) - 5.5px);
   top: 24px;
-  width: 10px;
-  height: 10px;
+  width: 11px;
+  height: 11px;
   background: var(--bg);
   border: 1.5px solid var(--border);
   transition: background 0.2s ease, border-color 0.2s ease;
@@ -556,7 +564,15 @@ a {
 }
 
 .timeline-node[data-kind='milestone']::before {
-  border-radius: 2px;
+  /* Mirrors the desktop milestone marker's own size bump over the project
+     circle (see .timeline-marker[data-kind='milestone']) — the Kandinsky
+     square reads as the heavier of the two shapes on both layouts. */
+  left: calc(var(--marker-x, 0px) - 7px);
+  top: 21px;
+  width: 14px;
+  height: 14px;
+  border-width: 2px;
+  border-radius: 3px;
   border-color: var(--terracotta);
 }
 

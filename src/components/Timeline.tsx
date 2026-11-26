@@ -11,6 +11,20 @@ import LineWarp from './LineWarp'
 const GUTTER_AMPLITUDE = 13
 const GUTTER_WAVELENGTH = 260
 const GUTTER_BASE_X = 15
+// Narrow mode's cards sit this far right of the gutter's own coordinate
+// space (see .timeline-node's margin-left in index.css) — the wandering
+// line and its marker must never be drawn under a card's own background
+// (the milestone plaque), so this margin is the width of their shared lane.
+const GUTTER_NODE_MARGIN = 24
+// The gutter SVG is positioned 21px left of .timeline-path (see
+// .timeline-curve's `left` in index.css), with GUTTER_BASE_X as its own
+// local-coordinate center — so a point at path-relative x (GUTTER_BASE_X +
+// wobble - 21) is where the curve actually draws. --marker-x converts that
+// into the node's own coordinate space (whose left edge sits
+// GUTTER_NODE_MARGIN to the right of the path's); CSS then only needs to
+// subtract each marker's own half-width to land it centered exactly on the
+// line, rather than offset from it.
+const GUTTER_MARKER_BASE = GUTTER_BASE_X - 21 - GUTTER_NODE_MARGIN
 
 // Wide viewports: a center path spanning the full width, entries alternating
 // left and right of it — rail positions as a PROPORTION of panel width
@@ -795,7 +809,7 @@ export default function Timeline({ projects }: { projects: Project[] }) {
       const height = wrapper.offsetHeight
       const offsets: Record<string, number> = {}
       for (const [slug, el] of nodeRefs.current) {
-        offsets[slug] = gutterOffset(el.offsetTop)
+        offsets[slug] = GUTTER_MARKER_BASE + gutterOffset(el.offsetTop)
       }
       setMarkerX(offsets)
 
