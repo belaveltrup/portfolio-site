@@ -13,7 +13,7 @@ import './KarteiDetail.css'
 /**
  * This page's visual language is pinned, verbatim, to the real asset the product already
  * ships with: the flat color-field App Store screenshot pipeline at app/screenshots/ in the
- * Kartei repo (template.html + run.mjs). Same fields, same type voice, same bare device
+ * Kartai repo (template.html + run.mjs). Same fields, same type voice, same bare device
  * panel with no bezel art, no gradient, no glow, no grain, no glass — the pipeline's own CSS
  * comments ban exactly these, and this page keeps that ban. Headlines and subtitles below are
  * that pipeline's real marketing copy (captions/en.json), not invented for this page.
@@ -117,7 +117,7 @@ export default function KarteiDetail({ project }: { project: Project }) {
           </svg>
           All projects
         </Link>
-        <span className="kd-wordmark">Kartei</span>
+        <span className="kd-wordmark">Kartai</span>
         <div className="kd-col">
           <div className="kd-tbox">
             <h1>5 minutes a day</h1>
@@ -137,7 +137,7 @@ export default function KarteiDetail({ project }: { project: Project }) {
           </p>
           <p>
             No guilt, no all-nighter — just one small step a day. Give a deck its exam date, and
-            Kartei works backward from there, scheduling exactly as many cards a day as it
+            Kartai works backward from there, scheduling exactly as many cards a day as it
             takes to be ready in time.
           </p>
           <p>
@@ -171,7 +171,7 @@ export default function KarteiDetail({ project }: { project: Project }) {
           </svg>
           All projects
         </Link>
-        <Link to="/projects/kartei/privacy" className="kd-footer-legal">
+        <Link to="/projects/kartai/privacy" className="kd-footer-legal">
           Privacy Policy
         </Link>
       </footer>

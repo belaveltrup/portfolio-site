@@ -7,5 +7,5 @@ export const demoRegistry: Record<string, ComponentType> = {}
 
 /** Maps a Project's `customPage` key to a component that replaces ProjectDetail's generic markup entirely. */
 export const customPageRegistry: Record<string, ComponentType<{ project: Project }>> = {
-  kartei: KarteiDetail,
+  kartai: KarteiDetail,
 }
