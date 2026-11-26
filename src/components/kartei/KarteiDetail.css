@@ -1,0 +1,255 @@
+/* Kartei project page — a themed override (DESIGN.md's unchanged policy: a themed
+   page belongs to this one project only, never retrofitted into the global system).
+   The palette, type voice and bare device panel are pinned verbatim to the real asset the
+   product ships with: app/screenshots/{template.html,run.mjs} in the Kartei repo.
+   Flat color fields, no gradient, no glow, no grain, no glass — that pipeline's own rule. */
+
+.kd-root {
+  /* The pipeline's exact FIELDS palette (run.mjs) plus its ink/cream pair. */
+  --kd-teal: #3ddbc8;
+  --kd-ice: #bfe3f0;
+  --kd-sand: #d8c3a5;
+  --kd-green: #30d158;
+  --kd-orange: #ff9f0a;
+  --kd-periwinkle: #8f9bff;
+  --kd-ink: #0e0c0a;
+  --kd-ink2: rgba(14, 12, 10, 0.74);
+  --kd-cream: #fff8f0;
+
+  font-family:
+    -apple-system, 'SF Pro Display', 'SF Pro Text', system-ui, 'Helvetica Neue', sans-serif;
+  color: var(--kd-ink);
+  background: var(--kd-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+.kd-root * {
+  box-sizing: border-box;
+}
+
+.kd-slide {
+  position: relative;
+  background: var(--field);
+  padding: 96px 7vw 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  overflow: hidden;
+}
+
+.kd-hero {
+  min-height: 100svh;
+  padding-top: 120px;
+  justify-content: center;
+}
+
+.kd-back {
+  position: absolute;
+  top: 28px;
+  left: 7vw;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--kd-ink);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  opacity: 0.74;
+  transition: opacity 0.15s ease;
+}
+
+.kd-back:hover {
+  opacity: 1;
+}
+
+.kd-wordmark {
+  position: absolute;
+  top: 28px;
+  right: 7vw;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: var(--kd-ink);
+  opacity: 0.74;
+}
+
+.kd-col {
+  max-width: 640px;
+  text-align: center;
+}
+
+.kd-tbox {
+  display: flex;
+  justify-content: center;
+}
+
+.kd-slide h1,
+.kd-slide h2 {
+  font-weight: 800;
+  font-size: clamp(32px, 6vw, 56px);
+  line-height: 1.04;
+  letter-spacing: -0.038em;
+  text-wrap: balance;
+  margin: 0;
+  color: var(--kd-ink);
+}
+
+.kd-slide p {
+  font-weight: 500;
+  font-size: clamp(16px, 2.4vw, 20px);
+  line-height: 1.35;
+  letter-spacing: -0.008em;
+  color: var(--kd-ink2);
+  margin: 16px 0 0;
+  text-wrap: balance;
+}
+
+.kd-shots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.kd-shots-pair .kd-panel {
+  width: min(42vw, 260px);
+}
+
+@media (min-width: 641px) {
+  .kd-shots[data-count='3'] .kd-panel {
+    width: min(30vw, 220px);
+  }
+
+  .kd-shots[data-count='4'] .kd-panel {
+    width: min(22vw, 190px);
+  }
+}
+
+.kd-panel {
+  width: min(78vw, 300px);
+  aspect-ratio: 760 / 1654;
+  border-radius: 15.4% / 7.1%;
+  overflow: hidden;
+  background: var(--kd-ink);
+  box-shadow: 0 40px 80px -24px rgba(14, 12, 10, 0.4);
+  flex: none;
+}
+
+.kd-panel img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.kd-arrow {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--kd-ink);
+  opacity: 0.55;
+  flex: none;
+}
+
+.kd-about {
+  background: var(--kd-ink);
+  padding: 96px 7vw;
+  display: flex;
+  justify-content: center;
+}
+
+.kd-about-inner {
+  max-width: 640px;
+}
+
+.kd-about p {
+  color: rgba(255, 248, 240, 0.8);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.6;
+  letter-spacing: -0.006em;
+  margin: 0 0 20px;
+}
+
+.kd-about-lede {
+  color: var(--kd-cream) !important;
+  font-weight: 700 !important;
+  font-size: clamp(20px, 2.6vw, 26px) !important;
+  line-height: 1.3 !important;
+}
+
+.kd-tech {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 32px 0 0;
+}
+
+.kd-tech li {
+  border: 1px solid rgba(255, 248, 240, 0.28);
+  color: var(--kd-cream);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 7px 14px;
+  border-radius: 999px;
+}
+
+.kd-footer {
+  background: var(--kd-ink);
+  padding: 32px 7vw 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.kd-back-footer {
+  position: static;
+  color: var(--kd-cream);
+  opacity: 0.85;
+}
+
+.kd-footer-legal {
+  color: var(--kd-cream);
+  opacity: 0.55;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.kd-footer-legal:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 640px) {
+  .kd-slide {
+    padding: 72px 6vw 56px;
+    gap: 36px;
+  }
+
+  .kd-hero {
+    padding-top: 96px;
+  }
+
+  .kd-shots-pair {
+    flex-direction: column;
+  }
+
+  .kd-shots-pair .kd-panel {
+    width: min(70vw, 280px);
+  }
+
+  .kd-arrow {
+    transform: rotate(90deg);
+  }
+
+  .kd-wordmark {
+    display: none;
+  }
+}
