@@ -8,6 +8,8 @@ import photoResult from '../../assets/kartei/04-photoResult.jpg'
 import race from '../../assets/kartei/05-race.jpg'
 import streak from '../../assets/kartei/06-streak.jpg'
 import performance from '../../assets/kartei/07-performance.jpg'
+import appLock from '../../assets/kartei/08-appLock.jpg'
+import ankiImport from '../../assets/kartei/09-ankiImport.jpg'
 import './KarteiDetail.css'
 
 /**
@@ -62,6 +64,18 @@ const slides: Slide[] = [
     title: "What's already sticking",
     subtitle: "See what's sticking and when you study best, before the exam shows you.",
     shots: [{ src: performance, alt: 'Study progress and best study times' }],
+  },
+  {
+    field: 'sand',
+    title: 'Study first, scroll later',
+    subtitle: "Locks social apps system-wide until today's session is done.",
+    shots: [{ src: appLock, alt: 'App lock settings for blocking social apps until studying is done' }],
+  },
+  {
+    field: 'periwinkle',
+    title: 'Never retype a card again',
+    subtitle: 'Import your Anki deck and keep studying it right in your next session.',
+    shots: [{ src: ankiImport, alt: 'Importing a deck from Anki, ready to merge into the app' }],
   },
 ]
 
