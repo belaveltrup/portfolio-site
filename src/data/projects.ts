@@ -162,7 +162,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'kartai',
-    title: 'Kartai - Karteikarten',
+    title: 'Kartai - Flashcards',
     tagline: 'iOS app',
     description:
       'Study five minutes a day instead of cramming: photograph a lecture slide to make a flashcard, give a deck its exam date, and the app paces the rest for you.',
