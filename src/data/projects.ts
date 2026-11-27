@@ -161,8 +161,8 @@ export const projects: Project[] = [
     date: '2025-03',
   },
   {
-    slug: 'kartai',
-    title: 'Kartai - Flashcards',
+    slug: 'kartei',
+    title: 'Kartei - Flashcards',
     tagline: 'iOS app',
     description:
       'Study five minutes a day instead of cramming: photograph a lecture slide to make a flashcard, give a deck its exam date, and the app paces the rest for you.',
@@ -171,7 +171,7 @@ export const projects: Project[] = [
     thumbnail: karteiIcon,
     date: '2026-11',
     theme: 'kartei',
-    customPage: 'kartai',
+    customPage: 'kartei',
   },
 ]
 

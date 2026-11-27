@@ -6,13 +6,13 @@ import './KarteiPrivacy.css'
 const DEFAULT_TITLE = 'Béla Veltrup — Portfolio'
 
 /**
- * Support page for the Kartai app: the URL Apple's App Store Connect "Support URL"
+ * Support page for the Kartei app: the URL Apple's App Store Connect "Support URL"
  * field points to. Shown publicly on the App Store listing, so keep it accurate:
  * update the in-app paths below (Settings, Report) if those screens move.
  */
 export default function KarteiSupport() {
   useEffect(() => {
-    document.title = 'Support — Kartai'
+    document.title = 'Support — Kartei'
     return () => {
       document.title = DEFAULT_TITLE
     }
@@ -21,7 +21,7 @@ export default function KarteiSupport() {
   return (
     <div className="kd-root">
       <section className="kd-legal">
-        <Link to="/projects/kartai" className="kd-back kd-back-legal">
+        <Link to="/projects/kartei" className="kd-back kd-back-legal">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
             <path
               d="M12 7H2M2 7L6.5 2.5M2 7L6.5 11.5"
@@ -31,14 +31,14 @@ export default function KarteiSupport() {
               strokeLinejoin="round"
             />
           </svg>
-          Back to Kartai
+          Back to Kartei
         </Link>
 
         <div className="kd-legal-inner">
           <h1>Support</h1>
           <p className="kd-legal-meta">
-            For the Kartai app · Looking for the{' '}
-            <Link to="/projects/kartai/privacy">Privacy Policy</Link> or the{' '}
+            For the Kartei app · Looking for the{' '}
+            <Link to="/projects/kartei/privacy">Privacy Policy</Link> or the{' '}
             <Link to="/impressum">Impressum</Link> instead?
           </p>
 
@@ -47,7 +47,7 @@ export default function KarteiSupport() {
             <p>
               Email <a href="mailto:contact@bela-dev.com">contact@bela-dev.com</a> for
               anything about the app: a bug, a question, or a problem with your
-              account. Kartai is built and supported by one person, so please allow a
+              account. Kartei is built and supported by one person, so please allow a
               few business days for a reply.
             </p>
           </section>
@@ -71,10 +71,10 @@ export default function KarteiSupport() {
           </section>
 
           <section>
-            <h2>Kartai+ subscription and billing</h2>
+            <h2>Kartei+ subscription and billing</h2>
             <p>
               Subscriptions are billed and managed entirely through the App Store, not
-              by us. Use "Restore Purchases" in Settings → Kartai+ if a purchase
+              by us. Use "Restore Purchases" in Settings → Kartei+ if a purchase
               didn't apply, or manage/cancel it directly in your iPhone's Settings →
               your name → Subscriptions. For billing disputes or refunds, Apple
               handles those, not us; for anything else about the subscription, email
@@ -93,7 +93,7 @@ export default function KarteiSupport() {
       </section>
 
       <footer className="kd-footer">
-        <Link to="/projects/kartai" className="kd-back kd-back-footer">
+        <Link to="/projects/kartei" className="kd-back kd-back-footer">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
             <path
               d="M12 7H2M2 7L6.5 2.5M2 7L6.5 11.5"
@@ -103,7 +103,7 @@ export default function KarteiSupport() {
               strokeLinejoin="round"
             />
           </svg>
-          Back to Kartai
+          Back to Kartei
         </Link>
       </footer>
     </div>

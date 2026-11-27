@@ -6,7 +6,7 @@ import './KarteiPrivacy.css'
 const DEFAULT_TITLE = 'Béla Veltrup — Portfolio'
 
 /**
- * Privacy policy for the Kartai app only — distinct from the portfolio site's
+ * Privacy policy for the Kartei app only — distinct from the portfolio site's
  * own Datenschutzerklärung at /datenschutz (German, § 5 DDG legal-notice
  * requirement, covers the website itself). Content reflects the app's actual
  * data flows (server/app/models.py, config.py, mailer.py, notify.py,
@@ -15,7 +15,7 @@ const DEFAULT_TITLE = 'Béla Veltrup — Portfolio'
  */
 export default function KarteiPrivacy() {
   useEffect(() => {
-    document.title = 'Privacy Policy — Kartai'
+    document.title = 'Privacy Policy — Kartei'
     return () => {
       document.title = DEFAULT_TITLE
     }
@@ -24,7 +24,7 @@ export default function KarteiPrivacy() {
   return (
     <div className="kd-root">
       <section className="kd-legal">
-        <Link to="/projects/kartai" className="kd-back kd-back-legal">
+        <Link to="/projects/kartei" className="kd-back kd-back-legal">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
             <path
               d="M12 7H2M2 7L6.5 2.5M2 7L6.5 11.5"
@@ -34,13 +34,13 @@ export default function KarteiPrivacy() {
               strokeLinejoin="round"
             />
           </svg>
-          Back to Kartai
+          Back to Kartei
         </Link>
 
         <div className="kd-legal-inner">
-          <h1>Privacy Policy — Kartai app</h1>
+          <h1>Privacy Policy — Kartei app</h1>
           <p className="kd-legal-meta">
-            Covers only the Kartai iOS/Android app · Last updated: November 2026
+            Covers only the Kartei iOS/Android app · Last updated: November 2026
           </p>
           <p className="kd-legal-meta">
             Looking for this website's own privacy policy instead?{' '}
@@ -50,7 +50,7 @@ export default function KarteiPrivacy() {
           <section>
             <h2>1. Controller</h2>
             <p>
-              The controller responsible for data processing in the Kartai app is:
+              The controller responsible for data processing in the Kartei app is:
               <br />
               Béla Veltrup
               <br />
@@ -65,11 +65,11 @@ export default function KarteiPrivacy() {
           <section>
             <h2>2. Overview</h2>
             <p>
-              Kartai is offline-first: your flashcards and study progress live first on
+              Kartei is offline-first: your flashcards and study progress live first on
               your device (SQLite) and are synced with our server so they're available
               across devices and don't get lost. Beyond that, we process data for your
               account, for optional features such as photos of study material, friends,
-              shared decks and reminders, and for the "Kartai+" subscription. The
+              shared decks and reminders, and for the "Kartei+" subscription. The
               details are below.
             </p>
           </section>
@@ -167,7 +167,7 @@ export default function KarteiPrivacy() {
           </section>
 
           <section>
-            <h2>9. "Kartai+" subscription</h2>
+            <h2>9. "Kartei+" subscription</h2>
             <p>
               Payments for the subscription are handled exclusively by the App Store
               (Apple) or Google Play; we never receive your payment or card details. To
@@ -271,7 +271,7 @@ export default function KarteiPrivacy() {
           <section>
             <h2>18. Use by children</h2>
             <p>
-              Kartai is not specifically directed at children under 16. We are not
+              Kartei is not specifically directed at children under 16. We are not
               aware of children under 16 submitting personal data to us without the
               consent of a parent or guardian.
             </p>
@@ -296,7 +296,7 @@ export default function KarteiPrivacy() {
       </section>
 
       <footer className="kd-footer">
-        <Link to="/projects/kartai" className="kd-back kd-back-footer">
+        <Link to="/projects/kartei" className="kd-back kd-back-footer">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
             <path
               d="M12 7H2M2 7L6.5 2.5M2 7L6.5 11.5"
@@ -306,7 +306,7 @@ export default function KarteiPrivacy() {
               strokeLinejoin="round"
             />
           </svg>
-          Back to Kartai
+          Back to Kartei
         </Link>
       </footer>
     </div>
